@@ -525,36 +525,26 @@
                 <pin_map port_index="0" component_pin="fmc_sck"/>
               </pin_maps>
             </port_map>
-            <port_map logical_port="SS_I" physical_port="spi_ss_i" dir="in" left="1" right="0">
+            <port_map logical_port="SS_I" physical_port="spi_ss_i" dir="in">
               <pin_maps>
                 <pin_map port_index="0" component_pin="fmc_cs1"/> <!-- AD9174 -->
-				<pin_map port_index="1" component_pin="fmc_cs2"/> <!-- HMC7044 -->
               </pin_maps>
             </port_map>
-            <port_map logical_port="SS_O" physical_port="spi_ss_o" dir="out" left="1" right="0">
+            <port_map logical_port="SS_O" physical_port="spi_ss_o" dir="out">
               <pin_maps>
                 <pin_map port_index="0" component_pin="fmc_cs1"/><!-- AD9174 -->
-				<pin_map port_index="1" component_pin="fmc_cs2"/><!-- HMC7044 -->
               </pin_maps>
             </port_map>
-            <port_map logical_port="SS_T" physical_port="spi_ss_t" dir="out" left="1" right="0">
+            <port_map logical_port="SS_T" physical_port="spi_ss_t" dir="out">
               <pin_maps>
                 <pin_map port_index="0" component_pin="fmc_cs1"/><!-- AD9174 -->
-				<pin_map port_index="1" component_pin="fmc_cs2"/><!-- HMC7044 -->
               </pin_maps>
             </port_map>
-			
 			<port_map logical_port="SS1_O" physical_port="spi_ss1_o" dir="out">
               <pin_maps>
-                <pin_map port_index="0" component_pin="fmc_cs1"/>
+                <pin_map port_index="0" component_pin="fmc_cs2"/><!-- HMC7044 -->
               </pin_maps>
             </port_map>
-			<port_map logical_port="SS2_O" physical_port="spi_ss2_o" dir="out">
-              <pin_maps>
-                <pin_map port_index="0" component_pin="fmc_cs2"/>
-              </pin_maps>
-            </port_map>
-			
           </port_maps>
         </interface>
 		<interface mode="master" name="gpio_interface" type="xilinx.com:interface:gpio_rtl:1.0" of_component="fmc_gpio" preset_proc="fmc_gpio_preset">
@@ -642,17 +632,17 @@
       <connection_map name="hpc_connector_gtx8_1" typical_delay="5" c1_st_index="82" c1_end_index="83" c2_st_index="14" c2_end_index="15"/>
     </connection>
     <connection name="hpc_fmc_hpc_spi" component1="hpc_connector" component2="fmc_hpc_spi">
-      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="290" c1_end_index="290" c2_st_index="0" c2_end_index="0"/>
-      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="250" c1_end_index="250" c2_st_index="1" c2_end_index="1"/>
-      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="249" c1_end_index="249" c2_st_index="2" c2_end_index="2"/>
-      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="291" c1_end_index="291" c2_st_index="3" c2_end_index="3"/>
-	  <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="131" c1_end_index="131" c2_st_index="4" c2_end_index="4"/>
+      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="291" c1_end_index="291" c2_st_index="0" c2_end_index="0"/><!-- CS0 -->
+      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="249" c1_end_index="249" c2_st_index="1" c2_end_index="1"/><!-- CCLK -->
+      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="250" c1_end_index="250" c2_st_index="2" c2_end_index="2"/><!-- MOSI -->
+      <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="290" c1_end_index="290" c2_st_index="3" c2_end_index="3"/><!-- MISO -->
+	  <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="131" c1_end_index="131" c2_st_index="4" c2_end_index="4"/><!-- CS1 -->
     </connection>
     <connection name="hpc_fmc_fmc_gpio" component1="hpc_connector" component2="fmc_gpio">
-      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="90" c1_end_index="90" c2_st_index="0" c2_end_index="0"/>
-      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="91" c1_end_index="91" c2_st_index="1" c2_end_index="1"/>
-      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="132" c1_end_index="132" c2_st_index="2" c2_end_index="2"/>
-      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="293" c1_end_index="293" c2_st_index="3" c2_end_index="3"/>
+      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="90" c1_end_index="90" c2_st_index="0" c2_end_index="0"/><!-- TX_EN0 -->
+      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="91" c1_end_index="91" c2_st_index="1" c2_end_index="1"/><!-- TX_EN1 -->
+      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="132" c1_end_index="132" c2_st_index="2" c2_end_index="2"/><!-- SPI_EN -->
+      <connection_map name="hpc_connector_gpio" typical_delay="5" c1_st_index="293" c1_end_index="293" c2_st_index="3" c2_end_index="3"/><!-- FMC_PE -->
     </connection>
   </connections>
   <ip_associated_rules>
@@ -679,6 +669,3 @@
 	</ip_associated_rule>
   </ip_associated_rules>
 </board>
-
-
-
