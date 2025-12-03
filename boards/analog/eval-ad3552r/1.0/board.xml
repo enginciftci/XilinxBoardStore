@@ -203,8 +203,8 @@
   <!-- CONNECTION MAPS (Physical -> Logical) -->
   <connections>
     <connection name="lpc_fmc_fmc_lpc_spi" component1="lpc_connector" component2="fmc_lpc_spi">
-       <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="246" c1_end_index="246" c2_st_index="0" c2_end_index="0"/> <!-- SCLK -->
-       <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="247" c1_end_index="247" c2_st_index="1" c2_end_index="1"/> <!-- CS -->
+       <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="247" c1_end_index="247" c2_st_index="0" c2_end_index="0"/> <!-- CS -->
+       <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="246" c1_end_index="246" c2_st_index="1" c2_end_index="1"/> <!-- SCLK -->
        <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="287" c1_end_index="287" c2_st_index="2" c2_end_index="2"/> <!-- D0 -->
        <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="288" c1_end_index="288" c2_st_index="3" c2_end_index="3"/> <!-- D1 -->
        <connection_map name="hpc_connector_spi" typical_delay="5" c1_st_index="249" c1_end_index="249" c2_st_index="4" c2_end_index="4"/> <!-- D2 -->
