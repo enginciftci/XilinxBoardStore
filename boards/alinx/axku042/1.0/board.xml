@@ -975,32 +975,32 @@
 						<preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0" />
 					</preferred_ips>
 					<port_maps>
-						<port_map logical_port="SDA_I" physical_port="iic_main_sda_i" dir="inout">
+						<port_map logical_port="SDA_I" physical_port="iic_main_sda_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="IIC_SDA_MAIN" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SDA_O" physical_port="iic_main_sda_o" dir="inout">
+						<port_map logical_port="SDA_O" physical_port="iic_main_sda_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="IIC_SDA_MAIN" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SDA_T" physical_port="iic_main_sda_t" dir="inout">
+						<port_map logical_port="SDA_T" physical_port="iic_main_sda_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="IIC_SDA_MAIN" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCL_I" physical_port="iic_main_scl_i" dir="inout">
+						<port_map logical_port="SCL_I" physical_port="iic_main_scl_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="IIC_SCL_MAIN" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCL_O" physical_port="iic_main_scl_o" dir="inout">
+						<port_map logical_port="SCL_O" physical_port="iic_main_scl_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="IIC_SCL_MAIN" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCL_T" physical_port="iic_main_scl_t" dir="inout">
+						<port_map logical_port="SCL_T" physical_port="iic_main_scl_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="IIC_SCL_MAIN" />
 							</pin_maps>
@@ -1153,92 +1153,92 @@
 						<preferred_ip vendor="xilinx.com" library="ip" name="axi_quad_spi" order="0" />
 					</preferred_ips>
 					<port_maps>
-						<port_map logical_port="IO0_I" physical_port="spi0_io0_i" dir="inout">
+						<port_map logical_port="IO0_I" physical_port="spi0_io0_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D0" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO0_O" physical_port="spi0_io0_o" dir="inout">
+						<port_map logical_port="IO0_O" physical_port="spi0_io0_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D0" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO0_T" physical_port="spi0_io0_t" dir="inout">
+						<port_map logical_port="IO0_T" physical_port="spi0_io0_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D0" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO1_I" physical_port="spi0_io1_i" dir="inout">
+						<port_map logical_port="IO1_I" physical_port="spi0_io1_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D1" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO1_O" physical_port="spi0_io1_o" dir="inout">
+						<port_map logical_port="IO1_O" physical_port="spi0_io1_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D1" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO1_T" physical_port="spi0_io1_t" dir="inout">
+						<port_map logical_port="IO1_T" physical_port="spi0_io1_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D1" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO2_I" physical_port="spi0_io2_i" dir="inout">
+						<port_map logical_port="IO2_I" physical_port="spi0_io2_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D2" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO2_O" physical_port="spi0_io2_o" dir="inout">
+						<port_map logical_port="IO2_O" physical_port="spi0_io2_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D2" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO2_T" physical_port="spi0_io2_t" dir="inout">
+						<port_map logical_port="IO2_T" physical_port="spi0_io2_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D2" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO3_I" physical_port="spi0_io3_i" dir="inout">
+						<port_map logical_port="IO3_I" physical_port="spi0_io3_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D3" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO3_O" physical_port="spi0_io3_o" dir="inout">
+						<port_map logical_port="IO3_O" physical_port="spi0_io3_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D3" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO3_T" physical_port="spi0_io3_t" dir="inout">
+						<port_map logical_port="IO3_T" physical_port="spi0_io3_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_D3" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SS_I" physical_port="spi0_ss_i" dir="inout">
+						<port_map logical_port="SS_I" physical_port="spi0_ss_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_FCS" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SS_O" physical_port="spi0_ss_o" dir="inout">
+						<port_map logical_port="SS_O" physical_port="spi0_ss_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_FCS" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SS_T" physical_port="spi0_ss_t" dir="inout">
+						<port_map logical_port="SS_T" physical_port="spi0_ss_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH0_FCS" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCK_I" physical_port="spi0_sclk_i" dir="inout">
+						<port_map logical_port="SCK_I" physical_port="spi0_sclk_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCK_O" physical_port="spi0_sclk_o" dir="inout">
+						<port_map logical_port="SCK_O" physical_port="spi0_sclk_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCK_T" physical_port="spi0_sclk_t" dir="inout">
+						<port_map logical_port="SCK_T" physical_port="spi0_sclk_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
@@ -1250,92 +1250,92 @@
 						<preferred_ip vendor="xilinx.com" library="ip" name="axi_quad_spi" order="0" />
 					</preferred_ips>
 					<port_maps>
-						<port_map logical_port="IO0_I" physical_port="spi1_io0_i" dir="inout">
+						<port_map logical_port="IO0_I" physical_port="spi1_io0_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D0" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO0_O" physical_port="spi1_io0_o" dir="inout">
+						<port_map logical_port="IO0_O" physical_port="spi1_io0_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D0" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO0_T" physical_port="spi1_io0_t" dir="inout">
+						<port_map logical_port="IO0_T" physical_port="spi1_io0_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D0" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO1_I" physical_port="spi1_io1_i" dir="inout">
+						<port_map logical_port="IO1_I" physical_port="spi1_io1_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D1" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO1_O" physical_port="spi1_io1_o" dir="inout">
+						<port_map logical_port="IO1_O" physical_port="spi1_io1_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D1" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO1_T" physical_port="spi1_io1_t" dir="inout">
+						<port_map logical_port="IO1_T" physical_port="spi1_io1_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D1" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO2_I" physical_port="spi1_io2_i" dir="inout">
+						<port_map logical_port="IO2_I" physical_port="spi1_io2_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D2" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO2_O" physical_port="spi1_io2_o" dir="inout">
+						<port_map logical_port="IO2_O" physical_port="spi1_io2_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D2" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO2_T" physical_port="spi1_io2_t" dir="inout">
+						<port_map logical_port="IO2_T" physical_port="spi1_io2_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D2" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO3_I" physical_port="spi1_io3_i" dir="inout">
+						<port_map logical_port="IO3_I" physical_port="spi1_io3_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D3" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO3_O" physical_port="spi1_io3_o" dir="inout">
+						<port_map logical_port="IO3_O" physical_port="spi1_io3_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D3" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="IO3_T" physical_port="spi1_io3_t" dir="inout">
+						<port_map logical_port="IO3_T" physical_port="spi1_io3_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_D3" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SS_I" physical_port="spi1_ss_i" dir="inout">
+						<port_map logical_port="SS_I" physical_port="spi1_ss_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_FCS" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SS_O" physical_port="spi1_ss_o" dir="inout">
+						<port_map logical_port="SS_O" physical_port="spi1_ss_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_FCS" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SS_T" physical_port="spi1_ss_t" dir="inout">
+						<port_map logical_port="SS_T" physical_port="spi1_ss_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH1_FCS" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCK_I" physical_port="spi1_sclk_i" dir="inout">
+						<port_map logical_port="SCK_I" physical_port="spi1_sclk_i" dir="in">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCK_O" physical_port="spi1_sclk_o" dir="inout">
+						<port_map logical_port="SCK_O" physical_port="spi1_sclk_o" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
 						</port_map>
-						<port_map logical_port="SCK_T" physical_port="spi1_sclk_t" dir="inout">
+						<port_map logical_port="SCK_T" physical_port="spi1_sclk_t" dir="out">
 							<pin_maps>
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
