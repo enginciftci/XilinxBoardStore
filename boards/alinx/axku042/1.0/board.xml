@@ -1148,7 +1148,8 @@
 						</port_map>
 					</port_maps>
 				</interface>
-				<interface mode="master" name="spi_flash0" type="xilinx.com:interface:spi_rtl:1.0" of_component="spi_flash0" preset_proc="flash0_preset">
+				<!-- OPTION 1: FLASH0 Main -->
+				<interface mode="master" name="spi_flash0" type="xilinx.com:interface:spi_rtl:1.0" of_component="spi_flash0" >
 					<preferred_ips>
 						<preferred_ip vendor="xilinx.com" library="ip" name="axi_quad_spi" order="0" />
 					</preferred_ips>
@@ -1245,7 +1246,8 @@
 						</port_map>
 					</port_maps>
 				</interface>
-				<interface mode="master" name="spi_flash1" type="xilinx.com:interface:spi_rtl:1.0" of_component="spi_flash1" preset_proc="flash1_preset">
+				<!-- OPTION 2: FLASH1 Main -->
+				<interface mode="master" name="spi_flash1" type="xilinx.com:interface:spi_rtl:1.0" of_component="spi_flash1" >
 					<preferred_ips>
 						<preferred_ip vendor="xilinx.com" library="ip" name="axi_quad_spi" order="0" />
 					</preferred_ips>
@@ -1340,6 +1342,90 @@
 								<pin_map port_index="0" component_pin="FLASH_CCLK" />
 							</pin_maps>
 						</port_map>						
+					</port_maps>
+				</interface>
+				<!-- OPTION 3: FLASH1 Secondary (No SCK) -->
+				<interface mode="master" name="spi_flash1_sec" type="xilinx.com:interface:spi_rtl:1.0" of_component="spi_flash1" preset_proc="flash1_preset">
+					<description>Use this interface for Dual Quad Mode (Option 3) connecting to SPI_1. Excludes SCK.</description>
+					<preferred_ips>
+						<preferred_ip vendor="xilinx.com" library="ip" name="axi_quad_spi" order="0" />
+					</preferred_ips>
+					<port_maps>
+						<port_map logical_port="IO0_I" physical_port="spi1_io0_i" dir="in">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D0" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO0_O" physical_port="spi1_io0_o" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D0" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO0_T" physical_port="spi1_io0_t" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D0" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO1_I" physical_port="spi1_io1_i" dir="in">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D1" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO1_O" physical_port="spi1_io1_o" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D1" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO1_T" physical_port="spi1_io1_t" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D1" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO2_I" physical_port="spi1_io2_i" dir="in">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D2" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO2_O" physical_port="spi1_io2_o" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D2" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO2_T" physical_port="spi1_io2_t" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D2" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO3_I" physical_port="spi1_io3_i" dir="in">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D3" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO3_O" physical_port="spi1_io3_o" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D3" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="IO3_T" physical_port="spi1_io3_t" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_D3" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="SS_I" physical_port="spi1_ss_i" dir="in">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_FCS" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="SS_O" physical_port="spi1_ss_o" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_FCS" />
+							</pin_maps>
+						</port_map>
+						<port_map logical_port="SS_T" physical_port="spi1_ss_t" dir="out">
+							<pin_maps>
+								<pin_map port_index="0" component_pin="FLASH1_FCS" />
+							</pin_maps>
+						</port_map>					
 					</port_maps>
 				</interface>
 			</interfaces>
@@ -1544,7 +1630,7 @@
 			<description>128 MB of nonvolatile storage that can be used for configuration or data storage</description>
 		</component>
 		<component name="spi_flash1" display_name="SPI flash 2" type="chip" sub_type="memory_flash_qspi" major_group="External Memory" part_name="N25Q128A" vendor="Numonyx">
-			<description>128 MB of nonvolatile storage that can be used for data storage</description>
+			<description>128 MB of nonvolatile storage that can be used for configuration or data storage</description>
 		</component>
 		<component name="pcie_perstn" display_name="PCIe PERSTN" type="chip" sub_type="reset" major_group="Reset">
 			<description>PCIe Reset Signal from Host</description>
@@ -1942,12 +2028,15 @@
 		</connection>
 		<connection name="part0_spi_flash0" component1="part0" component2="spi_flash0">
 			<connection_map name="part0_spi_flash_0" c1_st_index="197" c1_end_index="201" c2_st_index="0" c2_end_index="4" />
-			<connection_map name="part0_spi_flash_0" c1_st_index="519" c1_end_index="519" c2_st_index="5" c2_end_index="5" />
-		</connection>
-		<connection name="part0_spi_flash1" component1="part0" component2="spi_flash1">
-			<connection_map name="part0_spi_flash_1" c1_st_index="202" c1_end_index="206" c2_st_index="0" c2_end_index="4" />
 			<connection_map name="part0_spi_flash_1" c1_st_index="519" c1_end_index="519" c2_st_index="5" c2_end_index="5" />
 		</connection>
+		<connection name="part0_spi_flash1" component1="part0" component2="spi_flash1">
+			<connection_map name="part0_spi_flash_1" c1_st_index="519" c1_end_index="519" c2_st_index="5" c2_end_index="5" />
+			<connection_map name="part0_spi_flash_2" c1_st_index="202" c1_end_index="206" c2_st_index="0" c2_end_index="4" />
+		</connection>
+		<connection name="part0_spi_flash1_sec" component1="part0" component2="spi_flash1">
+			<connection_map name="part0_spi_flash_2" c1_st_index="202" c1_end_index="206" c2_st_index="0" c2_end_index="4" />
+		</connection>	
 		<connection name="part0_fan_pwm" component1="part0" component2="fan_pwm">
 			<connection_map name="part0_fan_pwm_1" c1_st_index="181" c1_end_index="181" c2_st_index="0" c2_end_index="0" />
 		</connection>
@@ -1979,10 +2068,24 @@
 					<associated_board_interface name="pcie_refclk" order="0" />
 				</associated_board_interfaces>
 			</ip>
+			<!-- Updated AXI Quad SPI Rules -->
+			<ip vendor="xilinx.com" library="ip" name="axi_quad_spi" version="*" ip_interface="SPI_0">
+				<associated_board_interfaces>
+					<!-- Allow Standard Quad Mode on Flash 0 -->
+					<associated_board_interface name="spi_flash0" order="0" />
+					<!-- Allow Standard Quad Mode on Flash 1 -->
+					<associated_board_interface name="spi_flash1" order="1" />
+				</associated_board_interfaces>
+			</ip>
 			<ip vendor="xilinx.com" library="ip" name="axi_quad_spi" version="*" ip_interface="SPI_1">
 				<associated_board_interfaces>
+					<!-- Allow Dual Quad Secondary Mode on Flash 1 -->
+					<associated_board_interface name="spi_flash1_sec" order="0" />
+				</associated_board_interfaces>
+			</ip>
+			<ip vendor="xilinx.com" library="ip" name="axi_quad_spi" version="*" ip_interface="SPI_0_TO_STARTUP">
+				<associated_board_interfaces>
 					<associated_board_interface name="spi_flash0" order="0" />
-					<associated_board_interface name="spi_flash1" order="1" />
 				</associated_board_interfaces>
 			</ip>
 		</ip_associated_rule>

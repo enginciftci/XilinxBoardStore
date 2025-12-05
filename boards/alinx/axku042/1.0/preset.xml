@@ -363,12 +363,26 @@
         <ip vendor="xilinx.com" library="ip" name="axi_quad_spi">
             <user_parameters>
 				<user_parameter name="CONFIG.C_SPI_MODE" value="2"/>
-				<user_parameter name="CONFIG.C_SCK_RATIO" value="2"/>
 				<user_parameter name="CONFIG.C_SPI_MEMORY" value="2"/>
 				<user_parameter name="CONFIG.C_FIFO_DEPTH" value="256" />
-				<user_parameter name="CONFIG.C_USE_STARTUP_INT" value="1"/>
-				<user_parameter name="CONFIG.C_DUAL_QUAD_MODE" value="1" />
-				<user_parameter name="CONFIG.C_NUM_SS_BITS" value="2"/>
+				<user_parameter name="CONFIG.C_USE_STARTUP_INT" value="0"/>
+				<user_parameter name="CONFIG.C_DUAL_QUAD_MODE" value="0" />
+				<user_parameter name="CONFIG.C_NUM_SS_BITS" value="1"/>
+				<user_parameter name="CONFIG.C_USE_STARTUP" value="1" />
+				<user_parameter name="CONFIG.C_XIP_MODE" value="0"/>
+				<user_parameter name="CONFIG.Async_Clk" value="0"/>
+            </user_parameters>
+        </ip>
+    </ip_preset>	
+    <ip_preset preset_proc_name="dual_quad_preset">
+        <ip vendor="xilinx.com" library="ip" name="axi_quad_spi">
+            <user_parameters>
+				<user_parameter name="CONFIG.C_SPI_MODE" value="2"/>
+				<user_parameter name="CONFIG.C_SPI_MEMORY" value="2"/>
+				<user_parameter name="CONFIG.C_FIFO_DEPTH" value="256" />
+				<user_parameter name="CONFIG.C_USE_STARTUP_INT" value="0"/>
+				<user_parameter name="CONFIG.C_DUAL_QUAD_MODE" value="0" />
+				<user_parameter name="CONFIG.C_NUM_SS_BITS" value="1"/>
 				<user_parameter name="CONFIG.C_USE_STARTUP" value="1" />
 				<user_parameter name="CONFIG.C_XIP_MODE" value="0"/>
 				<user_parameter name="CONFIG.Async_Clk" value="0"/>
@@ -379,17 +393,14 @@
         <ip vendor="xilinx.com" library="ip" name="axi_quad_spi">
             <user_parameters>
 				<user_parameter name="CONFIG.C_SPI_MODE" value="2"/>
-				<user_parameter name="CONFIG.C_SCK_RATIO" value="2"/>
 				<user_parameter name="CONFIG.C_SPI_MEMORY" value="2"/>
 				<user_parameter name="CONFIG.C_FIFO_DEPTH" value="256" />
-				<user_parameter name="CONFIG.C_USE_STARTUP_INT" value="1"/>
+				<user_parameter name="CONFIG.C_USE_STARTUP_INT" value="0"/>
 				<user_parameter name="CONFIG.C_DUAL_QUAD_MODE" value="1" />
 				<user_parameter name="CONFIG.C_NUM_SS_BITS" value="2"/>
 				<user_parameter name="CONFIG.C_USE_STARTUP" value="1" />
-				<user_parameter name="CONFIG.C_XIP_MODE" value="0"/>
 				<user_parameter name="CONFIG.Async_Clk" value="0"/>
             </user_parameters>
         </ip>
     </ip_preset>	
-	
 </ip_presets>
